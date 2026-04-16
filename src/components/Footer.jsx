@@ -8,12 +8,14 @@ export default function Footer() {
     <footer className="border-t border-white/8 bg-black/40 py-16">
       <div className="container-shell grid gap-10 md:grid-cols-2 xl:grid-cols-4">
         <div>
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="Big Bites Logo" className="h-12 w-auto" />
-        </div>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Big Bites Logo" className="h-12 w-auto" />
+          </div>
+
           <p className="mt-4 max-w-sm text-sm leading-7 text-brand-muted">
             Tiruvallur&apos;s premium shawarma brand — from pushcart to pride, built by {brand.ownerName} for flavour, loyalty, and franchise growth.
           </p>
+
           <div className="mt-6 flex items-center gap-3">
             {footerSocials.map(({ href, label, icon: Icon }) => (
               <a
@@ -24,7 +26,11 @@ export default function Footer() {
                 rel={href.startsWith('http') ? 'noreferrer' : undefined}
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-text transition duration-300 hover:-translate-y-1 hover:border-brand-orange hover:text-brand-orange hover:shadow-[0_0_26px_rgba(249,115,22,0.18)]"
               >
-                <Icon size={18} />
+                {typeof Icon === 'string' ? (
+                  <img src={Icon} alt={label} className="h-[18px] w-[18px] object-contain" />
+                ) : (
+                  <Icon size={18} />
+                )}
               </a>
             ))}
           </div>
@@ -55,10 +61,14 @@ export default function Footer() {
           <h4 className="text-sm font-semibold uppercase tracking-[0.28em] text-white/90">Contact</h4>
           <div className="mt-5 grid gap-4 text-sm text-brand-muted">
             <p>Tiruvallur, Tamil Nadu</p>
-            <a href={brand.phoneHref} className="transition hover:text-brand-orange">{brand.phoneDisplay}</a>
-            <a href="mailto:hello@bigbites.in" className="transition hover:text-brand-orange">hello@bigbites.in</a>
-            <a href="mailto:franchise@bigbites.in" className="transition hover:text-brand-orange">franchise@bigbites.in</a>
+            <a href={brand.phoneHref} className="transition hover:text-brand-orange">
+              {brand.phoneDisplay}
+            </a>
+            <a href="mailto:hello@thebigbites.in" className="transition hover:text-brand-orange">
+              hello@thebigbites.in
+            </a>
           </div>
+
           <a
             href={brand.phoneHref}
             className="mt-6 inline-flex items-center gap-2 rounded-full border border-brand-orange/30 bg-brand-orange/10 px-5 py-3 font-semibold text-brand-text transition hover:-translate-y-0.5 hover:border-brand-orange hover:bg-brand-orange hover:text-black"

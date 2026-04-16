@@ -12,6 +12,7 @@ import CustomSelect from '../components/CustomSelect'
 import VideoSection from '../sections/VideoSection'
 import { buildWhatsAppUrl, sendEmail } from '../lib/emailjs'
 
+
 const initialForm = {
   name: '',
   phone: '',

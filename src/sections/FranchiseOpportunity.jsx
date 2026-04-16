@@ -1,7 +1,9 @@
-import { BadgeIndianRupee, Image, Phone, TrendingUp } from 'lucide-react'
+import { BadgeIndianRupee, Phone, TrendingUp } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import SectionIntro from '../components/SectionIntro'
 import { brand, franchiseSupport } from '../data/site'
+import kitchen1 from '../assets/franchise/kitchen1.png'
+import kitchen2 from '../assets/franchise/kitchen2.jpg'
 
 export default function FranchiseOpportunity() {
   return (
@@ -11,7 +13,11 @@ export default function FranchiseOpportunity() {
           <div>
             <SectionIntro
               tag="Franchise Opportunity"
-              title={<>A Premium <em className="text-brand-orange">Growth Model</em> Built to Scale</>}
+              title={
+                <>
+                  A Premium <em className="text-brand-orange">Growth Model</em> Built to Scale
+                </>
+              }
               subtitle="A strong low-investment opportunity designed for entrepreneurs who want a scalable food business with a practical entry point and early profit potential."
             />
 
@@ -74,18 +80,39 @@ export default function FranchiseOpportunity() {
             <Reveal direction="right">
               <div className="card-surface rounded-[32px] p-7">
                 <div className="grid gap-4 sm:grid-cols-2">
-                  {[1, 2].map((item) => (
-                    <div
-                      key={item}
-                      className="flex min-h-[12rem] items-end justify-between rounded-[26px] border border-dashed border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(249,115,22,0.05))] p-5"
-                    >
-                      <div>
-                        <div className="text-[11px] uppercase tracking-[0.28em] text-brand-orange">Placeholder</div>
-                        <div className="mt-2 text-sm text-brand-muted">Store / kitchen / customer area image</div>
+                  <div className="group relative overflow-hidden rounded-[26px] border border-white/10">
+                    <img
+                      src={kitchen1}
+                      alt="Big Bites kitchen setup"
+                      className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.72))]" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="text-[11px] uppercase tracking-[0.28em] text-brand-orange">
+                        Kitchen Setup
                       </div>
-                      <Image size={22} className="text-white/40" />
+                      <div className="mt-2 text-sm text-white/80">
+                        Live food prep and operational workflow
+                      </div>
                     </div>
-                  ))}
+                  </div>
+
+                  <div className="group relative overflow-hidden rounded-[26px] border border-white/10">
+                    <img
+                      src={kitchen2}
+                      alt="Big Bites store and customer area"
+                      className="h-56 w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.72))]" />
+                    <div className="absolute bottom-4 left-4">
+                      <div className="text-[11px] uppercase tracking-[0.28em] text-brand-orange">
+                        Store View
+                      </div>
+                      <div className="mt-2 text-sm text-white/80">
+                        Brand-facing customer experience area
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Reveal>

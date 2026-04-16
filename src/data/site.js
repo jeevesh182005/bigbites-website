@@ -42,7 +42,7 @@ import {
   ChartNoAxesCombined,
   Flame,
   Handshake,
-  Instagram,
+  Camera,
   Mail,
   MapPin,
   MessageCircle,
@@ -65,7 +65,6 @@ export const brand = {
   instagram: 'https://www.instagram.com/big.bites_official?igsh=MWV1NTYwOW1rOHFuMw==',
   youtube: 'https://m.youtube.com/@big.bites_official',
   email: 'hello@bigbites.in',
-  franchiseEmail: 'franchise@bigbites.in',
   location: 'Tiruvallur, Tamil Nadu — 602 001',
 }
 
@@ -514,11 +513,22 @@ export const testimonials = [
 ]
 
 export const footerSocials = [
-  { label: 'Instagram', href: brand.instagram, icon: Instagram },
-  { label: 'YouTube', href: brand.youtube, icon: Play },
-  { label: 'WhatsApp', href: brand.phoneHref, icon: MessageCircle },
+  {
+    label: 'Instagram',
+    href: brand.instagram,
+    icon: '/icons/instagram.svg',
+  },
+  {
+    label: 'YouTube',
+    href: brand.youtube,
+    icon: '/icons/youtube.svg',
+  },
+  {
+    label: 'WhatsApp',
+    href: `https://wa.me/${brand.phone}`,
+    icon: '/icons/whatsapp.svg',
+  },
 ]
-
 export const contactCards = [
   {
     icon: MapPin,
@@ -536,17 +546,16 @@ export const contactCards = [
   {
     icon: Mail,
     title: 'Email Us',
-    value: brand.email,
-    sub: brand.franchiseEmail,
+    value: brand.email, 
     href: `mailto:${brand.email}`,
   },
-  {
-    icon: MessageCircle,
-    title: 'WhatsApp',
-    value: 'Message us on WhatsApp',
-    sub: 'Fastest response channel',
-    href: brand.phoneHref,
-  },
+{
+  icon: '/icons/whatsapp.svg',
+  title: 'WhatsApp',
+  value: 'Message us on WhatsApp',
+  sub: 'Fastest response channel',
+  href: `https://wa.me/${brand.phone}`,
+},
 ]
 
 export const faqs = [

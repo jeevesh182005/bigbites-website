@@ -170,13 +170,35 @@ Message: ${form.message}
               {contactCards.map(({ icon: Icon, title, value, sub, href }, index) => (
                 <Reveal key={title} delay={index * 0.08}>
                   <div className="card-surface flex items-start gap-4 rounded-[28px] p-6">
-                    <div className="rounded-2xl border border-brand-orange/20 bg-brand-orange/10 p-3 text-brand-orange">
-                      <Icon size={22} />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-brand-orange/20 bg-brand-orange/10 text-brand-orange">
+                      {typeof Icon === 'string' ? (
+                        <img
+                          src={Icon}
+                          alt={title}
+                          className="h-5 w-5 object-contain"
+                          style={
+                            title === 'WhatsApp'
+                              ? {
+                                  filter:
+                                    'invert(48%) sepia(91%) saturate(749%) hue-rotate(357deg) brightness(100%) contrast(101%)',
+                                }
+                              : {}
+                          }
+                        />
+                      ) : (
+                        <Icon size={22} />
+                      )}
                     </div>
+
                     <div>
                       <div className="font-semibold text-brand-text">{title}</div>
                       {href ? (
-                        <a href={href} className="mt-2 block text-sm leading-7 text-white/90 hover:text-brand-orange">
+                        <a
+                          href={href}
+                          target={href.startsWith('http') ? '_blank' : undefined}
+                          rel={href.startsWith('http') ? 'noreferrer' : undefined}
+                          className="mt-2 block text-sm leading-7 text-white/90 hover:text-brand-orange"
+                        >
                           {value}
                         </a>
                       ) : (
@@ -200,9 +222,15 @@ Message: ${form.message}
                       key={label}
                       href={href}
                       aria-label={label}
+                      target={href.startsWith('http') ? '_blank' : undefined}
+                      rel={href.startsWith('http') ? 'noreferrer' : undefined}
                       className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-brand-text transition hover:-translate-y-1 hover:border-brand-orange hover:text-brand-orange"
                     >
-                      <Icon size={18} />
+                      {typeof Icon === 'string' ? (
+                        <img src={Icon} alt={label} className="h-[18px] w-[18px] object-contain" />
+                      ) : (
+                        <Icon size={18} />
+                      )}
                     </a>
                   ))}
                 </div>

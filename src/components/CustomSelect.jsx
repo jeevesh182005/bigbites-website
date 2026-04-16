@@ -25,7 +25,7 @@ export default function CustomSelect({
             <ChevronDown className="absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-white/60" />
           </Listbox.Button>
 
-          <Listbox.Options className="absolute z-50 mt-2 max-h-60 w-full overflow-auto rounded-2xl border border-white/10 bg-[#121212] shadow-lg backdrop-blur-xl">
+          <Listbox.Options className="scrollbar-hide absolute z-50 mt-2 max-h-60 w-full overflow-y-auto rounded-2xl border border-white/10 bg-[#121212] shadow-lg backdrop-blur-xl">
             {options.map((option, index) => (
               <Listbox.Option
                 key={index}
