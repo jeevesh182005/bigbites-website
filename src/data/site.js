@@ -63,16 +63,16 @@ export const brand = {
   phoneDisplay: '+91 73970 45556',
   phoneHref: 'tel:+917397045556',
   instagram: 'https://www.instagram.com/big.bites_official?igsh=MWV1NTYwOW1rOHFuMw==',
-  youtube: 'https://m.youtube.com/@big.bites_official',
+  youtube: 'https://www.youtube.com/@BigBites-Official',
   email: 'hello@thebigbites.in',
   location: 'Tiruvallur, Tamil Nadu — 602 001',
 }
 
 export const stats = [
   { label: 'Customers Served', value: 50000, suffix: '+', icon: Users },
-  { label: 'Outlets Running', value: 9, suffix: '+', icon: MapPin },
+  { label: 'Outlets Running', value: 7, suffix: '+', icon: MapPin },
   { label: 'Own Stores', value: 3, suffix: '', icon: Store },
-  { label: 'Franchise Partners', value: 6, suffix: '+', icon: Handshake },
+  { label: 'Franchise Partners', value: 4, suffix: '', icon: Handshake },
 ]
 
 export const menuPreview = [
@@ -534,7 +534,7 @@ export const contactCards = [
     icon: MapPin,
     title: 'Our Location',
     value: brand.location,
-    sub: '9+ outlets across the district',
+    sub: '7+ outlets across the district',
   },
   {
     icon: Phone,
@@ -546,8 +546,9 @@ export const contactCards = [
   {
     icon: Mail,
     title: 'Email Us',
-    value: brand.email, 
-    href: `mailto:${brand.email}`,
+    value: brand.email,
+    sub: '',
+    href: `https://mail.google.com/mail/?view=cm&fs=1&to=${brand.email}&su=Big%20Bites%20Enquiry`,
   },
 {
   icon: '/icons/whatsapp.svg',
@@ -569,7 +570,7 @@ export const faqs = [
   },
   {
     q: 'Where are your outlets?',
-    a: 'Big Bites has 9+ outlets across Tiruvallur district, including own stores and franchise locations.',
+    a: 'Big Bites has 7+ outlets across Tiruvallur district, including own stores and franchise locations.',
   },
   {
     q: 'Do you do catering?',

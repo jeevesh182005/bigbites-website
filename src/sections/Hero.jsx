@@ -82,7 +82,7 @@
             <Reveal delay={0.3}>
               <div className="mt-12 grid max-w-2xl grid-cols-1 gap-8 border-t border-white/8 pt-8 sm:grid-cols-3">
                 <HeroCounter value={50000} suffix="+" label="Customers Served" />
-                <HeroCounter value={9} suffix="+" label="Outlets" />
+                <HeroCounter value={7} suffix="+" label="Outlets" />
                 <HeroCounter value={3} suffix="" label="Own Stores" />
               </div>
             </Reveal>

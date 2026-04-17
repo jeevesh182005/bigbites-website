@@ -64,7 +64,12 @@ export default function Footer() {
             <a href={brand.phoneHref} className="transition hover:text-brand-orange">
               {brand.phoneDisplay}
             </a>
-            <a href="mailto:hello@thebigbites.in" className="transition hover:text-brand-orange">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@thebigbites.in"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-brand-orange"
+            >
               hello@thebigbites.in
             </a>
           </div>

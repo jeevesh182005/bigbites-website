@@ -47,8 +47,8 @@ export default function FranchiseSection() {
             <Reveal direction="right">
               <div className="grid gap-5 sm:grid-cols-2">
                 {[
-                  ['9+', 'Outlets'],
-                  ['6+', 'Franchise Partners'],
+                  ['7+', 'Outlets'],
+                  ['4', 'Franchise Partners'],
                   ['48h', 'Lead Response'],
                   ['2024', 'Brand Started'],
                 ].map(([value, label]) => (
