@@ -64,7 +64,7 @@ export const brand = {
   phoneHref: 'tel:+917397045556',
   instagram: 'https://www.instagram.com/big.bites_official?igsh=MWV1NTYwOW1rOHFuMw==',
   youtube: 'https://m.youtube.com/@big.bites_official',
-  email: 'hello@bigbites.in',
+  email: 'hello@thebigbites.in',
   location: 'Tiruvallur, Tamil Nadu — 602 001',
 }
 
