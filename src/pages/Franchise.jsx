@@ -1,5 +1,5 @@
 import { Phone } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import toast from 'react-hot-toast'
 import FormField from '../components/FormField'
 import PageHero from '../components/PageHero'
@@ -30,6 +30,20 @@ function normalizePhone(phone) {
 export default function Franchise() {
   const [form, setForm] = useState(initialForm)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '')
+      const element = document.getElementById(id)
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }, 300) // delay ensures DOM is loaded
+      }
+    }
+  }, [])
+
   const [showWhatsappCta, setShowWhatsappCta] = useState(false)
   const [lastWhatsappMessage, setLastWhatsappMessage] = useState('')
 
